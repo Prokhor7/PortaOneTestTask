@@ -38,17 +38,20 @@ function processFile(): void {
             min = num;
           }
           if (num > previousValue) {
-            decreasingSequence = [];
+            decreasingSequence = [num];
             increasingSequence.push(num);
             if (increasingSequence.length > longestIncreasingSequence.length) {
               longestIncreasingSequence = increasingSequence;
             }
           } else if (num < previousValue) {
-            increasingSequence = [];
+            increasingSequence = [num];
             decreasingSequence.push(num);
             if (decreasingSequence.length > longestDecreasingSequence.length) {
               longestDecreasingSequence = decreasingSequence;
             }
+          } else if (num === previousValue) {
+            increasingSequence = [num];
+            decreasingSequence = [num];
           }
         } else {
           max = num;
