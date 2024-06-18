@@ -8,4 +8,4 @@ cd PortaOneTestTask```
 
 3. Install dependencies: ```npm install```
 
-4. Run the script ```npx ts-node prokhorenko.ts 10m.txt```
+4. Run the script ```npm run start```
